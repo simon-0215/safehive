@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "494544769476",
+    "project_id": "safehive-8796c",
+    "storage_bucket": "safehive-8796c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494544769476:android:8980f6e2fa46b328e0d491",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHVYJijsajZ2gDe4I38oBKDJcXO_v7qAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
