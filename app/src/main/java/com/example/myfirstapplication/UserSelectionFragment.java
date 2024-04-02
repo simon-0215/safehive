@@ -24,9 +24,9 @@ public class UserSelectionFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // 找到登录按钮并设置点击事件监听器
-        View buttonLogin = view.findViewById(R.id.user1ChatButton);
+        View user1Chatbotton = view.findViewById(R.id.user1ChatButton);
 
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
+        user1Chatbotton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
