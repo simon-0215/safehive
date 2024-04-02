@@ -10,6 +10,14 @@
             android:label="@string/login_label"
             tools:layout="@layout/login" />
     <action
+            android:id="@+id/action_login_to_userSelection"
+            app:destination="@id/UserSelectionFragment"/>
+    <fragment
+            android:id="@+id/UserSelectionFragment"
+            android:name="com.example.myfirstapplication.HomePageFragment"
+            android:label="@string/user_selection_label"
+            tools:layout="@layout/user_selection"></fragment>
+    <action
             android:id="@+id/action_login_to_homepage"
             app:destination="@id/HomePageFragment"/>
 

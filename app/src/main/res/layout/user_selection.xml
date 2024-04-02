@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FirstFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+        <Button
+                android:id="@+id/user1ChatButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="user1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" tools:layout_editor_absoluteY="167dp"/>
+        <Button
+                android:id="@+id/user2ChatButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="user2"
+                app:layout_constraintTop_toBottomOf="@id/user1ChatButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"/>
+
+        <Button
+                android:id="@+id/user3ChatButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="user3"
+                app:layout_constraintTop_toBottomOf="@id/user2ChatButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"/>
+
+        <Button
+                android:id="@+id/user4ChatButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="user4"
+                app:layout_constraintTop_toBottomOf="@id/user3ChatButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"/>
+
+        <Button
+                android:id="@+id/user5ChatButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="user5"
+                app:layout_constraintTop_toBottomOf="@id/user4ChatButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
