@@ -1,6 +1,7 @@
 package com.example.myfirstapplication.dataaccess;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,8 +13,9 @@ public class UserTableDAO {
     List<List<String>> users = new ArrayList<>();
 
     public UserTableDAO() {
-        String PATH ="C:\\Users\\derro\\Documents\\Code\\3A\\safehive\\app\\src\\main\\java\\com\\example\\myfirstapplication\\dataaccess\\database\\UserTable.csv";
 
+        String PATH = new File("").getAbsolutePath().concat("\\app\\src\\main\\java\\com\\example\\myfirstapplication\\dataaccess\\database\\UserTable.csv");
+        System.out.println(PATH);
         try (BufferedReader br = new BufferedReader(new FileReader(PATH))) {
             String line;
             line = br.readLine();
