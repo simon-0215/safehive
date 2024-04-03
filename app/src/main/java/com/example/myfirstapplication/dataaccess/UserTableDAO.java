@@ -42,13 +42,14 @@ public class UserTableDAO {
     }
 
     // search user
-    public List<String> searchUserByUserName(String searchedUser) {
+    public List<List<String>> searchUserByUserName(String searchedUser) {
+        List<List<String>> matchedUsers = new ArrayList<>();
         for (List<String> user: users) {
-            if (user.get(1).equals(searchedUser)) {
-                return user;
+            if (user.get(1).contains(searchedUser)) {
+                matchedUsers.add(user);
             }
         }
-        return null;
+        return matchedUsers;
     }
 
     // get user by id
