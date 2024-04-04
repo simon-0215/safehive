@@ -36,7 +36,7 @@ public class UserSelectionFragment extends Fragment {
                 String password = passwordEditText.getText().toString();*/
                 //会出现问题只要实现了检查的目的就会闪退
                 NavHostFragment.findNavController(UserSelectionFragment.this)
-                        .navigate(R.id.action_login_to_homepage);
+                        .navigate(R.id.action_UserSelectionFragment_to_HomePageFragment);
                 //if (validateLogin(username, password)) {
                 // 如果账号和密码验证成功，导航到HomePageFragment
                    /* NavHostFragment.findNavController(LoginFragment.this)

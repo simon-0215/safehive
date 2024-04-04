@@ -3,54 +3,39 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
-            app:startDestination="@id/loginFragment"> //起点，这里的fragment不是java类里面的就只是暂时的id罢了
+            app:startDestination="@id/loginFragment">
     <fragment
             android:id="@+id/loginFragment"
             android:name="com.example.myfirstapplication.LoginFragment"
             android:label="@string/login_label"
-            tools:layout="@layout/login" />
-    <action
-            android:id="@+id/action_login_to_userSelection"
-            app:destination="@id/UserSelectionFragment"/>
+            tools:layout="@layout/login" >
+
+        <action android:id="@+id/action_loginFragment_to_UserSelectionFragment"
+                app:destination="@id/UserSelectionFragment"/>
+    </fragment>
+
+
+
+
     <fragment
             android:id="@+id/UserSelectionFragment"
-            android:name="com.example.myfirstapplication.HomePageFragment"
+            android:name="com.example.myfirstapplication.UserSelectionFragment"
             android:label="@string/user_selection_label"
             tools:layout="@layout/user_selection">
-
+        <action android:id="@+id/action_UserSelectionFragment_to_HomePageFragment"
+                app:destination="@id/HomePageFragment"/>
     </fragment>
-    <action
-            android:id="@+id/action_login_to_homepage"
-            app:destination="@id/HomePageFragment"/>
+
+
+
 
 
     <fragment
             android:id="@+id/HomePageFragment"
             android:name="com.example.myfirstapplication.HomePageFragment"
             android:label="@string/homepage_label"
-            tools:layout="@layout/homepage">
+            tools:layout="@layout/homepage"/>
 
 
-    </fragment>
 
-
-    <fragment
-            android:id="@+id/FirstFragment"
-            android:name="com.example.myfirstapplication.FirstFragment"
-            android:label="@string/first_fragment_label"
-            tools:layout="@layout/fragment_first">
-
-        <action
-                android:id="@+id/action_login_to_homepage"
-                app:destination="@id/SecondFragment"/>
-    </fragment>
-
-    <fragment
-            android:id="@+id/SecondFragment"
-            android:name="com.example.myfirstapplication.SecondFragment"
-            android:label="@string/second_fragment_label"
-            tools:layout="@layout/fragment_second">
-
-
-    </fragment>
 </navigation>

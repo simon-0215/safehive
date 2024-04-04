@@ -9,7 +9,7 @@
     <string name="login_label">Login</string>
     <string name="homepage_label">homepage</string>
     <string name="register_label">register</string>
-    <string name="user_selection_label">user_selction</string>
+    <string name="user_selection_label">user_selection</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris volutpat, dolor id

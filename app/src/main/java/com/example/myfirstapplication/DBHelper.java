@@ -3,28 +3,37 @@ package com.example.myfirstapplication;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
+import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "SafeHive.db";
-    private static final int DATABASE_VERSION = 1;
 
-    public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    private Context mContext;
+    private static final String User_table = "create table Student ("
+            +"id integer primary key autoincrement,"
+            +"user text"
+            +"password text)";
+
+
+
+    public DBHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
+        mContext = context;
+    }
+
+
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(User_table);
+        Toast.makeText(mContext,"succeded",Toast.LENGTH_SHORT);
+
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {//创建数据库一般在想获取writeable的数据库不成功后会调用此方法得到数据库
-        db.execSQL(
-                "CREATE TABLE messages (" +
-                        "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                        "user_id INTEGER," +
-                        "text TEXT)"
-        );
-    }
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Handle database version upgrades if needed
     }
 }
